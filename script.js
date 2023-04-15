@@ -4,7 +4,7 @@ const task = document.getElementById('task');
 
 
 function addTask() {
-    if(input.value === '' || input.value === ' '){
+    if(input.value === '' || input.value.trim().length === 0){
         document.querySelector('.error').style.display = `block`;
         document.querySelector('.error').innerText = "Error. Write Something...";
     } else{
