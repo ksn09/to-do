@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(30, 30, 177, 1) 27%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.todo-app h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 25px;
+  padding-left: 1.5em;
+  margin-top: 30px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: 30px;
+  font-size: bold;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: rgb(218 36 70);
+  padding: 1em;
+  border-radius: 25px;
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.task {
+  margin-top: 20px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  user-select: none;
+  cursor: pointer;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  background-image: url(./images/unchecked.png);
+  height: 28px;
+  width: 28px;
+  top: 10px;
+  left: 8px;
+  background-size: cover;
+  background-position: center;
+}
+
+ul li.check {
+  color: rgb(17, 16, 16);
+  text-decoration: line-through;
+}
+
+.check {
+  color: rgb(17, 16, 16);
+  text-decoration: line-through;
+}
+
+ul li.check::before {
+  background-image: url(./images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 7px;
+  height: 28px;
+  width: 28px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: rgb(218 36 70);
+}
+
+ul li span:hover {
+  cursor: pointer;
+  background: #edeef0;
+  transition: 0.2s ease-in-out;
+}
+
+ul#task {
+  padding-top: 1em;
+}
+
+.error {
+  padding-top: 1em;
+  padding-left: 10px;
+}
